@@ -1,0 +1,24 @@
+{
+  "name": "com.heathen.steamworksfoundation",
+  "displayName": "Steamworks Foundation",
+  "version": "2.20.8",
+  "unity": "2020.3",
+  "author": {
+    "name": "Heathen Group",
+    "email": "support@heathen.group",
+    "url": "https://heathen.group"
+  },
+  "dependencies": {
+    "com.unity.mathematics": "1.2.5"
+  },
+  "documentationUrl": "https://kb.heathenengineering.com/assets/steamworks",
+  "keywords": [],
+  "description": "A powerful set of tools, systems and editor extensions to make you integration with the Steam API easier, faster, and more robust. Make the most of Steam for your game!",
+  "license": "LICENSE.md",
+  "samples": 
+	[{
+		"displayName": "Sample Scenes",
+		"description": "A set of common sample scenes.",
+		"path": "Samples~/Samples"
+	 }]
+}
