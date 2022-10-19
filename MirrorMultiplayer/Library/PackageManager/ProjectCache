@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638017712236316251
-    m_Hash: 3786455612
+      ticks: 638017759107275958
+    m_Hash: 963688061
   m_LockFileStatus:
     m_FilePath: E:/Github1/MirrorMultiplayer/MirrorMultiplayer/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638017712236676355
-    m_Hash: 3676882991
+      ticks: 638017759107686045
+    m_Hash: 885155957
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -121,6 +121,55 @@ m_ResolvedPackages:
   repository:
     type: 
     url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.mirror.steamworks.net@https://github.com/Chykary/FizzySteamworks.git?path=/com.mirror.steamworks.net
+  testable: 0
+  isDirectDependency: 1
+  version: 5.1.0
+  source: 5
+  resolvedPath: E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.mirror.steamworks.net@63f94f5966
+  assetPath: Packages/com.mirror.steamworks.net
+  name: com.mirror.steamworks.net
+  displayName: FizzySteamworks
+  author:
+    name: Mirror Community
+    email: 
+    url: https://discord.gg/XXWRwf2kNd
+  category: 
+  type: 
+  description: FizzySteamworks is a Mirror transport for use with Steamworks.NET.
+    You must have already installed Steamworks.NET, you can get Steamworks.NET from
+    git by following the instructions documented in the GitHub you aquired this from.
+  status: 4
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - steam
+  - steamworks
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: https://github.com/Chykary/FizzySteamworks
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/Chykary/FizzySteamworks.git?path=/com.mirror.steamworks.net
     revision: 
     path: 
   unityLifecycle:
