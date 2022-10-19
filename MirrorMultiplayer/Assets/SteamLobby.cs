@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HeathenEngineering.SteamworksIntegration;
 using UnityEngine;
 using Mirror;
 using Steamworks;
 using UnityEngine.UI;
+using TMPro;
 
 public class SteamLobby : MonoBehaviour
 {
@@ -20,13 +22,28 @@ public class SteamLobby : MonoBehaviour
     
     //Gameobject
     public GameObject hostButton;
-    public Text lobbyNameText;
+    public TMP_Text lobbyNameText;
 
     private void Start()
-    {
+    { 
+        
+        if (!SteamSettings.Initialized) {return; }
+        
+        _manager = GetComponent<CustomNetworkManager>();
+
+        lobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
+        joinRequest = Callback<GameLobbyJoinRequested_t>.Create(OnJoinRequest);
+        lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
+
     }
 
+    public void HostLobby()
+    {
+        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, _manager.maxConnections);
+    }
 
+    
+    
     private void OnLobbyCreated(LobbyCreated_t callback)
     {
         if(callback.m_eResult != EResult.k_EResultOK) {return;}

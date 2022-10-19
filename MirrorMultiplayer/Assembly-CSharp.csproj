@@ -41,20 +41,46 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CustomNetworkManager.cs" />
      <Compile Include="Assets\SteamLobby.cs" />
+     <Compile Include="Assets\CustomNetworkManager.cs" />
+     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\1 Quick Start\Scene1Behaviour.cs" />
+     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\Common Scripts\MarketingButtons.cs" />
+     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\3 Stats and Achievements\Scene3Behaviour.cs" />
+     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\2 User Data\Scene2Behaviour.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\ScriptTemplates\57-Mirror__Network Transform-NewNetworkTransform.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Mirror\Notice.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
      <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity 2021.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -298,15 +324,6 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity 2021.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="ReportGeneratorMerged">
-     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
      <Reference Include="Mono.CecilX.Rocks">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
      </Reference>
@@ -315,6 +332,15 @@
      </Reference>
      <Reference Include="Mono.CecilX">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="ReportGeneratorMerged">
+     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Mono.CecilX.Mdb">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
@@ -754,11 +780,11 @@
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Mathematics">
-     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
      <Reference Include="Heathen.Core.Editor">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Heathen.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
@@ -781,40 +807,32 @@
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="FizzySteamworks">
+     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\FizzySteamworks.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="FizzySteamworks">
-     <HintPath>E:\Github1\MirrorMultiplayer\MirrorMultiplayer\Library\ScriptAssemblies\FizzySteamworks.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Mirror.csproj">
+      <Project>{476343a9-ce99-c09b-f63b-0abc2db1240e}</Project>
+      <Name>Mirror</Name>
+    </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
       <Project>{2ef080d6-feb7-eb95-40aa-1c78e375aa2c}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{09f94596-6312-1d63-07a2-e6bea87d2983}</Project>
-      <Name>Mirror.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="where-allocations.csproj">
-      <Project>{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}</Project>
-      <Name>where-allocations</Name>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{c71f3902-7b70-4ebb-be76-3e78ad277327}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{69b9928b-26c6-a135-eeee-f533609d3b42}</Project>
-      <Name>Mirror.Components</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Examples.csproj">
       <Project>{487cd321-1922-b700-3bab-fe83b0d954a7}</Project>
       <Name>Mirror.Examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Editor.csproj">
+      <Project>{09f94596-6312-1d63-07a2-e6bea87d2983}</Project>
+      <Name>Mirror.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
       <Project>{9da98c8e-62ad-8487-2693-a9dccafa9d1f}</Project>
@@ -824,13 +842,21 @@
       <Project>{a81f6fe8-296c-d58a-f8e0-ef31ca4645d2}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{476343a9-ce99-c09b-f63b-0abc2db1240e}</Project>
-      <Name>Mirror</Name>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{c71f3902-7b70-4ebb-be76-3e78ad277327}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="where-allocations.csproj">
+      <Project>{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}</Project>
+      <Name>where-allocations</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{29e08674-84e4-5282-0a7e-ee6f93b4953a}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{69b9928b-26c6-a135-eeee-f533609d3b42}</Project>
+      <Name>Mirror.Components</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
