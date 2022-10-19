@@ -41,12 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\SteamLobby.cs" />
-     <Compile Include="Assets\CustomNetworkManager.cs" />
+     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\2 User Data\Scene2Behaviour.cs" />
      <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\1 Quick Start\Scene1Behaviour.cs" />
+     <Compile Include="Assets\SteamLobby.cs" />
      <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\Common Scripts\MarketingButtons.cs" />
      <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\3 Stats and Achievements\Scene3Behaviour.cs" />
-     <Compile Include="Assets\Samples\Steamworks Foundation\2.20.8\Sample Scenes\2 User Data\Scene2Behaviour.cs" />
+     <Compile Include="Assets\CustomNetworkManager.cs" />
+     <Compile Include="Assets\PlayerObjectController.cs" />
+     <Compile Include="Assets\PlayerListItem.cs" />
+     <Compile Include="Assets\LobbyController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />

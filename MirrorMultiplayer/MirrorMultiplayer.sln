@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepathy", "Telepathy.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcp2k", "kcp2k.csproj", "{2ef080d6-feb7-eb95-40aa-1c78e375aa2c}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "where-allocations", "where-allocations.csproj", "{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{f163a133-645e-3105-8668-05e64c9a6c79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "where-allocations", "where-allocations.csproj", "{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Authenticators", "Mirror.Authenticators.csproj", "{a81f6fe8-296c-d58a-f8e0-ef31ca4645d2}"
 EndProject
@@ -42,10 +42,10 @@ Global
 		{c71f3902-7b70-4ebb-be76-3e78ad277327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ef080d6-feb7-eb95-40aa-1c78e375aa2c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2ef080d6-feb7-eb95-40aa-1c78e375aa2c}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f163a133-645e-3105-8668-05e64c9a6c79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f163a133-645e-3105-8668-05e64c9a6c79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7f6cea9b-1634-5a40-7e68-7d9f6f1d99d1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a81f6fe8-296c-d58a-f8e0-ef31ca4645d2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a81f6fe8-296c-d58a-f8e0-ef31ca4645d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0a4016d3-484f-0a63-a2f4-4b3325bb89cd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
