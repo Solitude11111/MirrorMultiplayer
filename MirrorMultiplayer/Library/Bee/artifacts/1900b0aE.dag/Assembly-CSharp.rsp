@@ -410,6 +410,7 @@
 "Assets/CustomNetworkManager.cs"
 "Assets/LobbyController.cs"
 "Assets/PlayerListItem.cs"
+"Assets/PlayerMovementConroller.cs"
 "Assets/PlayerObjectController.cs"
 "Assets/Samples/Steamworks Foundation/2.20.8/Sample Scenes/1 Quick Start/Scene1Behaviour.cs"
 "Assets/Samples/Steamworks Foundation/2.20.8/Sample Scenes/2 User Data/Scene2Behaviour.cs"

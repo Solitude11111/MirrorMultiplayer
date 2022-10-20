@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,10 @@ public class PlayerObjectController : NetworkBehaviour
         }
     }
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     private void PlayerReadyUpdate(bool oldValue, bool newValue)
     {
@@ -99,6 +104,19 @@ public class PlayerObjectController : NetworkBehaviour
         }
     }
     
-    
+    //Startname
+
+    public void CanStartGame(string sceneName)
+    {
+        if (hasAuthority)
+        {
+            CMdCanStartGame(sceneName);
+        }
+    }
+    [Command]
+    public void CMdCanStartGame(string sceneName)
+    {
+        _manager.StarGame(sceneName);
+    }
     
 }

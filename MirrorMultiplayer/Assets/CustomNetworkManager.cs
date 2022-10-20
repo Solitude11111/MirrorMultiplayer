@@ -26,4 +26,12 @@ public class CustomNetworkManager : NetworkManager
 
         }
     }
+
+
+    public void StarGame(string sceneName)
+    {
+        ServerChangeScene(sceneName);
+    }
+    
+    
 }
