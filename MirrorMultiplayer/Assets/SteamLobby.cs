@@ -17,6 +17,13 @@ public class SteamLobby : MonoBehaviour
     protected Callback<GameLobbyJoinRequested_t> joinRequest;
     protected Callback<LobbyEnter_t> lobbyEntered;
     
+    
+    //Lobbies callbacks
+    protected Callback<LobbyMatchList_t> lobbyList;
+    protected Callback<LobbyDataUpdate_t> lobbyDataUpdated;
+
+    public List<CSteamID> lobbyIDs = new List<CSteamID>();
+    
     //Variebles
     public ulong currentLobbyID;
     private const string HostAddressKey = "HostAddress";
@@ -34,11 +41,13 @@ public class SteamLobby : MonoBehaviour
         joinRequest = Callback<GameLobbyJoinRequested_t>.Create(OnJoinRequest);
         lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
 
+        lobbyList = Callback<LobbyMatchList_t>.Create(OnGetLobbyList);
+        lobbyDataUpdated = Callback<LobbyDataUpdate_t>.Create(OnGetLobbyData);
     }
 
     public void HostLobby()
     {
-        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, _manager.maxConnections);
+        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypePublic, _manager.maxConnections);
     }
 
     
@@ -78,7 +87,40 @@ public class SteamLobby : MonoBehaviour
         
         
     }
+
+    public void JoinLobby(CSteamID lobbyID)
+    {
+        SteamMatchmaking.JoinLobby(lobbyID);
+    }
     
-    
+    public void GetLobbiesList()
+    {
+        if (lobbyIDs.Count > 0)
+        {
+            lobbyIDs.Clear();
+        }
+        SteamMatchmaking.AddRequestLobbyListResultCountFilter(60);
+        SteamMatchmaking.RequestLobbyList();
+    }
+
+    void OnGetLobbyList(LobbyMatchList_t result)
+    {
+        if (LobbiesListManager.instance.listOfLobbies.Count > 0)
+        {
+            LobbiesListManager.instance.DestroyLobbies();
+        }
+
+        for (int i = 0; i < result.m_nLobbiesMatching; i++)
+        {
+            CSteamID lobbyID = SteamMatchmaking.GetLobbyByIndex(i);
+            lobbyIDs.Add(lobbyID);
+            SteamMatchmaking.RequestLobbyData(lobbyID);
+        }
+    }
+
+    void OnGetLobbyData(LobbyDataUpdate_t result)
+    {
+        LobbiesListManager.instance.DisplayLobbies(lobbyIDs, result);
+    }
     
 }

@@ -105,6 +105,7 @@ MonoBehaviour:
   playerSteamID: 0
   playerName: 
   ready: 0
+  playerColor: 0
 --- !u!136 &8883790762559080524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135,6 +136,14 @@ MonoBehaviour:
   syncInterval: 0.1
   speed: 0.1
   playerModel: {fileID: 6285355806492621075}
+  playerMesh: {fileID: 887202066555406780}
+  playerColors:
+  - {fileID: 2100000, guid: 8f673f5f13a63ed498ea188fb999186a, type: 2}
+  - {fileID: 2100000, guid: c210e9605d67a2e469004998629b8768, type: 2}
+  - {fileID: 2100000, guid: 0efaed6fa560f304db449f80ca23b8f8, type: 2}
+  - {fileID: 2100000, guid: b4d41d9cf9e884441869ac33944424c8, type: 2}
+  - {fileID: 2100000, guid: ee81554d63478974d98fa1d392e4feca, type: 2}
+  - {fileID: 2100000, guid: 3d64f0f9bd569d842b397104278b9432, type: 2}
 --- !u!114 &2696912059196426521
 MonoBehaviour:
   m_ObjectHideFlags: 0

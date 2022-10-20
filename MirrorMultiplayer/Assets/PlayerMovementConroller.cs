@@ -13,9 +13,12 @@ public class PlayerMovementConroller : NetworkBehaviour
     public float speed = 0.1f;
     public GameObject playerModel;
 
+    public MeshRenderer playerMesh;
+    public Material[] playerColors;
+    
+    
     private void Start()
     {
-        SetPosition();
         playerModel.SetActive(false);
     }
 
@@ -26,7 +29,9 @@ public class PlayerMovementConroller : NetworkBehaviour
         {
             if (playerModel.activeSelf == false)
             {
+                SetPosition();
                 playerModel.SetActive(true);
+                PlayerCosmeticsSetup();
             }
 
             if (hasAuthority)
@@ -50,4 +55,11 @@ public class PlayerMovementConroller : NetworkBehaviour
 
         transform.position += moveDirection * speed;
     }
+
+    public void PlayerCosmeticsSetup()
+    {
+        playerMesh.material = playerColors[GetComponent<PlayerObjectController>().playerColor];
+    }
+    
+    
 }

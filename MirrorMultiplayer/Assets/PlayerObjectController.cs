@@ -14,6 +14,9 @@ public class PlayerObjectController : NetworkBehaviour
     [SyncVar(hook = nameof(PlayerNameUpdate))] public string playerName;
     [SyncVar(hook = nameof(PlayerReadyUpdate))] public bool ready;
 
+    //colors
+    [SyncVar(hook = nameof(SendPlayerColor))] public int playerColor;
+    
     private CustomNetworkManager _manager;
 
     private CustomNetworkManager Manager
@@ -111,12 +114,37 @@ public class PlayerObjectController : NetworkBehaviour
         if (hasAuthority)
         {
             CMdCanStartGame(sceneName);
+
         }
     }
     [Command]
     public void CMdCanStartGame(string sceneName)
     {
         _manager.StarGame(sceneName);
+    }
+    
+    [Command]
+    public void CmdUpdatePlayerColor(int newValue)
+    {
+        SendPlayerColor(playerColor, newValue);
+    }
+
+    public void SendPlayerColor(int oldValue, int newValue)
+    {
+        if (isServer)
+        {
+            playerColor = newValue;
+        }
+
+        if (isClient && (oldValue != newValue))
+        {
+            UpdateColor(newValue);
+        }
+    }
+
+    void UpdateColor(int message)
+    {
+        playerColor = message;
     }
     
 }
