@@ -10,7 +10,8 @@ public class PlayerObjectController : NetworkBehaviour
     [SyncVar] public int connectionID;
     [SyncVar] public int playerIdNumber;
     [SyncVar] public ulong playerSteamID;
-    [SyncVar(hook = nameof(PlayerNameUpdate))] public string PlayerName;
+    [SyncVar(hook = nameof(PlayerNameUpdate))] public string playerName;
+    [SyncVar(hook = nameof(PlayerReadyUpdate))] public bool ready;
 
     private CustomNetworkManager _manager;
 
@@ -27,9 +28,38 @@ public class PlayerObjectController : NetworkBehaviour
         }
     }
 
+
+    private void PlayerReadyUpdate(bool oldValue, bool newValue)
+    {
+        if (isServer)
+        {
+            this.ready = newValue;
+        }
+
+        if (isClient)
+        {
+            LobbyController.instance.UpdatePlayerList();
+        }
+    }
+
+    [Command]
+    private void CMdSetPlayerReady()
+    {
+        this.PlayerReadyUpdate(this.ready,!this.ready);
+    }
+
+    public void ChangeReady()
+    {
+        if (hasAuthority)
+        {
+            CMdSetPlayerReady();
+        }
+    }
+    
+    
     public override void OnStartAuthority()
     {
-        CmdSetPlayerName(SteamFriends.GetPersonaName().ToString());
+        CMdSetPlayerName(SteamFriends.GetPersonaName().ToString());
         gameObject.name = "LocalGamePlayer";
         LobbyController.instance.FindLocalPlayer();
         LobbyController.instance.UpdateLobbyName();
@@ -50,9 +80,9 @@ public class PlayerObjectController : NetworkBehaviour
 
 
     [Command]
-    private void CmdSetPlayerName(string playerName)
+    private void CMdSetPlayerName(string playerName)
     {
-        this.PlayerNameUpdate(this.PlayerName, playerName);
+        this.PlayerNameUpdate(this.playerName, playerName);
     }
     
     
@@ -60,7 +90,7 @@ public class PlayerObjectController : NetworkBehaviour
     {
         if (isServer) //Host
         {
-            this.PlayerName = newValue;
+            this.playerName = newValue;
         }
 
         if (isClient) //Client
