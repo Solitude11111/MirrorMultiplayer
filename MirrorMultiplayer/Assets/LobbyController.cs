@@ -34,6 +34,9 @@ public class LobbyController : MonoBehaviour
     //Manager
     private CustomNetworkManager _manager;
     
+    //Maps
+    public string mapName;
+    
     private CustomNetworkManager Manager
     {
         get
@@ -213,9 +216,9 @@ public class LobbyController : MonoBehaviour
         }
     }
 
-    public void StartGame(string sceneName)
+    public void StartGame()
     {
-        localPlayerController.CanStartGame(sceneName);
+        localPlayerController.CanStartGame(mapName);
     }
     
 }

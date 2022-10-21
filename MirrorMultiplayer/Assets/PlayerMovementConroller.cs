@@ -25,7 +25,7 @@ public class PlayerMovementConroller : NetworkBehaviour
     private void Update()
     {
         
-        if (SceneManager.GetActiveScene().name == "Game")
+        if (SceneManager.GetActiveScene().name != "Lobby")
         {
             if (playerModel.activeSelf == false)
             {
